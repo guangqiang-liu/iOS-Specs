@@ -15,16 +15,16 @@ Pod::Spec.new do |s|
                        TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://gitlab.qianbaocard.org/iOS/tool/WLWidget'
+  s.homepage         = 'https://github.com/guangqiang-liu/GQWidget'
   s.license          = "MIT"
   s.author           = { 'guangqiang' => '1126756952@qq.com' }
-  s.source           = { :git => 'git@gitlab.qianbaocard.org:iOS/tool/WLWidget.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/guangqiang-liu/GQWidget.git', :tag => s.version.to_s }
 
   s.platform         = :ios, "8.0"
 
   s.requires_arc     = true
 
-  s.prefix_header_file = "WLWidget/WLWidget.pch"
+  # s.prefix_header_file = "WLWidget/WLWidget.pch"
 
   s.subspec 'Category' do |ss|
         ss.source_files = "WLWidget/Category/**/*.{h,m}"
@@ -32,4 +32,10 @@ Pod::Spec.new do |s|
   s.subspec 'Macro' do |ss|
       ss.source_files = "WLWidget/Macro/**/*.{h,m}"
   end
+
+  s.subspec 'SComponent' do |ss|
+      ss.source_files = "WLWidget/SComponent/**/*.{h,m}"
+  end
+  
+  s.dependency 'SDWebImage'
 end
